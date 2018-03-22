@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <item
+        android:id="@+id/action_copy_link"
+        android:orderInCategory="100"
+        android:icon="@android:drawable/ic_menu_manage"
+        android:title="@string/copy_link"
+         />
+    <item
+        android:id="@+id/action_open_brows"
+        android:orderInCategory="101"
+        android:title="@string/open_browser"
+         />
+    <item
+        android:id="@+id/action_share_via"
+        android:orderInCategory="102"
+        android:title="@string/share_via"
+         />
+</menu>

@@ -1,0 +1,50 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context="eplus.scrap.view.tourdetail.FAQFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <WebView  xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/wv_faq"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:orientation="vertical">-->
+        <!--<LinearLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:background="#fff"-->
+            <!--&gt;-->
+            <!--<ImageView-->
+                <!--android:layout_width="50dp"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:tint="@color/tint_icon"-->
+                <!--android:src="@drawable/running"-->
+                <!--/>-->
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/about"-->
+                <!--android:textSize="10pt"-->
+                <!--android:textStyle="bold"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--/>-->
+
+        <!--</LinearLayout>-->
+
+       <!---->
+
+
+    <!--</LinearLayout>-->
+
+
+</ScrollView>

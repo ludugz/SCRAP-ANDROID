@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_44sdp"
+    android:layout_height="@dimen/_40sdp"
+    android:layout_marginRight="@dimen/_5sdp"
+    android:background="#8a8c8f"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/line_time_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="10:00"
+            android:textSize="@dimen/_11sdp"
+            android:textColor="@android:color/white"
+            android:textAlignment="center"
+            android:includeFontPadding="false"
+            />
+        <ImageView
+            android:id="@+id/tv_status_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_circle_red" />
+        <TextView
+            android:id="@+id/tv_daining"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:gravity="center_horizontal"
+            android:text="@string/members_in_advance"
+            android:textSize="@dimen/_7sdp"
+            android:visibility="visible"
+            android:textColor="#666666"
+            />
+        <TextView
+            android:id="@+id/tv_for_member"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:gravity="center_horizontal"
+            android:text="@string/for_member"
+            android:textSize="@dimen/_7sdp"
+            android:visibility="gone"
+            android:textColor="@color/color_white"
+            />
+    </LinearLayout>
+
+</LinearLayout>

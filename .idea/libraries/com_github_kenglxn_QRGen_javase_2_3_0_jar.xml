@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="com.github.kenglxn.QRGen:javase:2.3.0@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.kenglxn.QRGen/javase/2.3.0/9c9a7e0575c37c49b225848bf6190484d5a1c95b/javase-2.3.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.kenglxn.QRGen/javase/2.3.0/69fbbef86a4a21fd91cbbd610755d29c5da5ab8f/javase-2.3.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

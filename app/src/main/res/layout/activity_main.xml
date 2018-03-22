@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="eplus.scrap.MainActivity">
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tabLayout"
+
+            />
+
+        <RelativeLayout
+            android:id="@+id/tab_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:layout_alignParentBottom="true">
+                <ImageView
+                    android:id="@+id/blue_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/tabmain_bg"
+                    />
+        </RelativeLayout>
+        <Button
+            android:id="@+id/bt_home"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_above="@+id/tabLayout"
+            android:layout_centerHorizontal="true"
+            android:background="@color/transparent"
+            android:visibility="visible"
+            />
+
+        <android.support.design.widget.TabLayout
+            android:layout_alignParentBottom="true"
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabBackground="@color/transparent"
+            app:tabTextColor="@android:color/white"
+            app:tabSelectedTextColor="#f0f20c"
+            app:tabIndicatorHeight="0dp"
+            app:tabTextAppearance="@style/MyTabLayoutTextAppearance"
+            android:minHeight="?attr/actionBarSize"
+
+            />
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/re_login"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_white"
+            android:clickable="true"
+            android:visibility="gone"
+            android:focusable="true"
+            android:orientation="vertical">
+
+                <!-- TODO: Update blank fragment layout -->
+
+                <ImageView
+                    android:id="@+id/my_awesome_toolbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/lo20_header"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/TMC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/my_awesome_toolbar"
+                    android:layout_marginLeft="@dimen/_16sdp"
+                    android:layout_marginRight="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_45sdp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/tmc_text"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/TMC"
+                    android:layout_marginLeft="@dimen/_16sdp"
+                    android:layout_marginRight="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:gravity="center"
+                    android:text="@string/lo_text"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/_10sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/_120sdp"
+                    android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/bt_login"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginLeft="@dimen/_16sdp"
+                            android:layout_marginRight="@dimen/_16sdp"
+                            android:layout_marginTop="@dimen/_16sdp"
+                            android:background="@drawable/round_rect_button"
+                            android:text="ログイン・会員登録"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/_14sdp" />
+
+                        <LinearLayout
+                            android:id="@+id/bt_cancel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/_16sdp"
+                            android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_cancel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/transparent"
+                                    android:drawableBottom="@drawable/line"
+                                    android:text="今は登録しない"
+                                    android:textColor="#323232"
+                                    android:textSize="@dimen/_10sdp" />
+
+                        </LinearLayout>
+                </LinearLayout>
+
+
+        </RelativeLayout>
+</RelativeLayout>

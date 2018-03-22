@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_8sdp"
+    android:layout_marginBottom="@dimen/_2sdp"
+    >
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:animateLayoutChanges="true"
+        >
+        <LinearLayout
+            android:id="@+id/line_top_event"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/_8sdp"
+
+            >
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/tp_placeholder"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_eventName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="君は明日と消えていった"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    />
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:textSize="@dimen/_10sdp"
+                    android:textColor="@android:color/black"
+                    android:text="公演期間：2017/06/16(tue)〜2017/06/16(tue)"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_venue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:textSize="@dimen/_10sdp"
+                    android:text="会場：A"
+                    android:textColor="@android:color/black"
+
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:animateLayoutChanges="true">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/listTimeline"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                android:layout_centerVertical="true"
+                android:layout_weight=".1"
+                >
+            </android.support.v7.widget.RecyclerView>
+            <RelativeLayout
+                android:id="@+id/re_bt_next_time"
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="match_parent"
+                android:background="@color/color_white"
+                android:visibility="gone"
+                android:layout_centerVertical="true">
+                <ImageButton
+                    android:id="@+id/bt_nexttime"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_marginLeft="@dimen/_4sdp"
+                    android:layout_marginRight="@dimen/_4sdp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/arrow_right_black"
+                    android:background="@drawable/backround_rect_border_yellow_color"
+
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/calendar_divider"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

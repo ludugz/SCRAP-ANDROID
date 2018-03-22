@@ -1,0 +1,109 @@
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+android {
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        applicationId "officialapp.mysterycircus.jp"
+        minSdkVersion 17
+        targetSdkVersion 26
+        versionCode 14
+        versionName "1.4.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        renderscriptTargetApi 26
+        renderscriptSupportModeEnabled true
+        multiDexEnabled true
+    }
+    flavorDimensions "default"
+    def CONFIG = { k -> "\"${project.properties.get(k)}\"" }
+    productFlavors {
+        staging {
+            buildConfigField "String", "BASE_URL_API", "\"https://is-ticket.mysterycircus.jp/\""
+            buildConfigField "String", "BASE_SECRET_KEY","\"pLgcv/DJCQgqdKpfxivx9jvZRF9MtIYw9c7PQB670yo=\""
+            resValue "string", "app_name", "Staging"
+            resValue "string", "facebook_app_id","1859567214373814"
+            resValue "string", "facebook_app_provioder", "com.facebook.app.FacebookContentProvider1859567214373814"
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/ic_launcher_is",
+                    roundIcon: "@mipmap/ic_launcher_round_is"
+            ]
+            minSdkVersion 17
+            applicationId 'eplus.scrap.is'
+        }
+        staging1 {
+            buildConfigField "String", "BASE_URL_API", "\"https://is-ticket1.mysterycircus.jp/\""
+            buildConfigField "String", "BASE_SECRET_KEY", "\"pLgcv/DJCQgqdKpfxivx9jvZRF9MtIYw9c7PQB670yo=\""
+            resValue "string", "app_name", "Staging"
+            resValue "string", "facebook_app_id","1859567214373814"
+            resValue "string", "facebook_app_provioder", "com.facebook.app.FacebookContentProvider1859567214373814"
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/ic_launcher_is",
+                    roundIcon: "@mipmap/ic_launcher_round_is"
+            ]
+            minSdkVersion 17
+            applicationId 'eplus.scrap.is'
+        }
+        production {
+            buildConfigField "String", "BASE_URL_API", "\"https://ticket.mysterycircus.jp/\""
+            buildConfigField "String", "BASE_SECRET_KEY", "\"WLdcjqlwOTS6L34C+t70meQW4HuiOX834pvqACJj75A=\""
+            resValue "string", "app_name", "TMC"
+            resValue "string", "facebook_app_id","1288371414602163"
+            resValue "string", "facebook_app_provioder", "com.facebook.app.FacebookContentProvider1288371414602163"
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/ic_launcher",
+                    roundIcon: "@mipmap/ic_launcher_round"
+            ]
+            minSdkVersion 17
+            applicationId 'officialapp.mysterycircus.jp'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories {
+    maven { url "https://jitpack.io" }
+    mavenCentral()
+    maven { url 'https://maven.google.com' }
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+}
+dependencies {
+    compile('com.crashlytics.sdk.android:crashlytics:2.7.1@aar') {
+        transitive = true
+    }
+    compile 'com.google.firebase:firebase-core:11.8.0'
+    compile 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:design:26.1.0'
+    compile 'com.android.support:support-v4:26.1.0'
+    compile "com.android.support:support-core-utils:26.1.0"
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
+    compile 'com.squareup.okhttp3:okhttp:3.8.1'
+    compile 'com.google.code.gson:gson:2.8.2'
+    compile 'com.github.bumptech.glide:glide:3.8.0'
+    compile 'com.miguelcatalan:materialsearchview:1.4.0'
+    compile 'com.android.support:leanback-v17:26.1.0'
+    compile 'com.android.support:recyclerview-v7:26.1.0'
+    compile 'com.google.zxing:core:3.3.0'
+    compile 'com.journeyapps:zxing-android-embedded:3.5.0'
+    compile 'com.optimus:editTextField:0.2.0'
+    compile 'joda-time:joda-time:2.9.1'
+    compile 'com.squareup:otto:1.3.8'
+    compile 'com.ms-square:etsyblur:0.2.1'
+    compile 'com.github.kenglxn.QRGen:javase:2.3.0'
+    compile 'com.intuit.sdp:sdp-android:1.0.5'
+    compile 'com.google.firebase:firebase-core:11.8.0'
+    compile 'com.google.firebase:firebase-messaging:11.8.0'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.facebook.android:facebook-android-sdk:4.6.0'
+//    compile 'com.android.support:multidex:1.0.0'
+    compile 'com.github.amarjain07:StickyScrollView:1.0.2'
+    compile project(':liboverscroll')
+}
+apply plugin: 'com.google.gms.google-services'

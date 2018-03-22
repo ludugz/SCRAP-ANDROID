@@ -1,0 +1,5 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="day_text_w">50dp</dimen>
+    <dimen name="day_text_h">25dp</dimen>
+</resources>

@@ -1,0 +1,406 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_search"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    tools:context="eplus.scrap.view.SearchFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_yellow"
+            android:layout_marginTop="60dp"
+            />
+        <ImageView
+            android:id="@+id/img_top_red"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/red_bg" />
+
+        <RelativeLayout
+            android:id="@+id/re_top_ct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+            <LinearLayout
+                android:id="@+id/line_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:layout_below="@+id/line_keyword"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:orientation="vertical">
+
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="?attr/actionBarSize"
+                    app:tabBackground="@color/transparent"
+                    app:tabIndicatorHeight="0dp"
+                    app:tabSelectedTextColor="#f0f20c"
+                    app:tabTextAppearance="@style/SearchLayoutTextAppearance"
+                    app:tabTextColor="@android:color/white" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/view_modal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/black"
+                android:alpha="0.5"
+                android:visibility="visible"
+                />
+            <LinearLayout
+                android:id="@+id/line_keyword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:layout_marginRight="@dimen/_8sdp"
+                android:orientation="horizontal">
+                <com.optimus.edittextfield.EditTextField
+                    android:id="@+id/txt_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".5"
+                    android:background="@drawable/rounded_edittext"
+                    android:drawableLeft="@drawable/icon_search"
+                    android:drawablePadding="5dp"
+                    android:hint="@string/search_hint"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:paddingLeft="5dp"
+                    android:textSize="@dimen/_12sdp"
+                    app:clearButtonMode="whileEditing" />
+                <RelativeLayout
+                    android:id="@+id/bt_searchperiod"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_4sdp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/normal"
+                    >
+                    <TextView
+                        android:id="@+id/tv_period"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/period"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/_12sdp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/icon_calenda"
+                        android:layout_toLeftOf="@+id/tv_period"
+                        android:layout_marginRight="@dimen/_8sdp"
+                        />
+
+                    <ImageView
+                        android:id="@+id/ic_delete"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:src="@drawable/delete"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/_8sdp"
+                        android:padding="@dimen/_3sdp"
+                        android:visibility="visible"
+                        />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/re_period"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/view_modal_period"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.5"
+            android:background="@android:color/black" />
+
+        <LinearLayout
+            android:id="@+id/line_content_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_black"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/line_bt_start_end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:layout_marginRight="@dimen/_8sdp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bt_fromdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/_2sdp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/rounded_edittext"
+                    android:drawableLeft="@drawable/ic_calendar_black"
+                    android:drawablePadding="@dimen/_8sdp"
+                    android:ellipsize="end"
+                    android:gravity="left|center_vertical"
+                    android:maxLines="1"
+                    android:paddingLeft="15dp"
+                    android:text="@string/start_date"
+                    android:textAllCaps="false"
+                    android:textColor="@color/lb_grey"
+                    android:textSize="@dimen/_12sdp" />
+
+                <Button
+                    android:id="@+id/bt_todate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_2sdp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/rounded_edittext"
+                    android:drawableLeft="@drawable/ic_calendar_black"
+                    android:drawablePadding="@dimen/_8sdp"
+                    android:ellipsize="end"
+                    android:gravity="left|center_vertical"
+                    android:maxLines="1"
+                    android:paddingLeft="@dimen/_8sdp"
+                    android:text="@string/end_date"
+                    android:textAllCaps="false"
+                    android:textColor="@color/lb_grey"
+                    android:textSize="@dimen/_12sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <eplus.scrap.calendarview2.CalendarView2
+                    android:id="@+id/calendarView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_150sdp"
+                    android:background="#1cb888"
+                    app:mcv_selectionColor="@color/color_black"
+                    app:mcv_showOtherDates="all"
+                    app:mcv_dateTextAppearance="@style/TextAppearance.MyCustomDay"
+                    app:mcv_headerTextAppearance="@style/TextAppearance.MyCustomDay"
+                    app:mcv_tileHeight="@dimen/_32sdp"
+                    app:mcv_tileSize="@dimen/_11sdp"
+                    app:mcv_tileWidth="@dimen/_32sdp"
+                    app:mcv_weekDayTextAppearance="@style/TextAppearance.MyCustomDay" />
+
+                <Button
+                    android:id="@+id/bt_ok"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:text="@string/ok"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/_12sdp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/re_period_top"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"
+            android:layout_above="@+id/line_content_bottom"
+            android:background="@color/transparent">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/color_black" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/period_bg" />
+
+            <TextView
+                android:id="@+id/tv_today"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/line_content1"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.6"
+                android:text="2017/09/17"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_12sdp" />
+
+            <LinearLayout
+                android:id="@+id/line_content1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:layout_marginRight="@dimen/_8sdp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bt_this_week"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/_4sdp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/normal"
+                    android:text="@string/this_week"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/bt_next_week"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/_4sdp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/normal"
+                    android:text="@string/next_week"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/bt_this_month"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/normal"
+                    android:text="@string/this_month"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/re_no_internet_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/_35sdp"
+        android:visibility="gone"
+        android:background="#ededed">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:visibility="visible"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/clumsy_lagre"
+                android:layout_gravity="center_horizontal"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:text="@string/no_internet"
+                android:textAlignment="center"
+                android:visibility="visible"
+                android:background="@color/transparent"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/_14sdp"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:text="@string/tap_to_retry"
+                android:textAlignment="center"
+                android:visibility="visible"
+                android:background="@color/transparent"
+                android:layout_gravity="center_horizontal"
+                android:textSize="@dimen/_12sdp"
+                />
+            <LinearLayout
+                android:id="@+id/line_bt_retry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/backround_rect_blue_color"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginLeft="@dimen/_26sdp"
+                android:layout_marginRight="@dimen/_26sdp"
+                android:paddingTop="@dimen/_12sdp"
+                android:paddingBottom="@dimen/_12sdp"
+                android:gravity="center"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_retry"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_4sdp"
+                    android:text="@string/retry"
+                    android:textColor="@color/color_white"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_16sdp"
+                    android:gravity="center"
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

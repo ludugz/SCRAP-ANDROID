@@ -1,0 +1,104 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="eplus.scrap.view.tourdetail.TicketSalesFragment"
+    android:orientation="vertical">
+
+    <!-- TODO: Update blank fragment layout -->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_awesome_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:minHeight="?attr/actionBarSize">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:id="@+id/bt_news"
+            android:textSize="14sp"
+            android:background="@null"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:textColor="#FFF"
+            />
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="チケット販売"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+    </android.support.v7.widget.Toolbar>
+    <LinearLayout
+        android:id="@+id/line_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/re_bt_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/bt_privios_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/privios_month"
+                android:textSize="8pt"
+                android:background="@android:color/transparent"
+                />
+            <Button
+                android:id="@+id/bt_next_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/next_month"
+                android:layout_alignParentRight="true"
+                android:background="@android:color/transparent"
+                android:textSize="8pt"
+                />
+
+        </RelativeLayout>
+        <android.support.v17.leanback.widget.HorizontalGridView
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:id="@+id/gridView"
+            tools:listitem="@layout/day_item"
+            android:numColumns="10"
+            android:horizontalSpacing="5dp"
+            android:verticalSpacing="5dp"
+            android:columnWidth="100dp"
+            />
+        />
+        <ListView
+            android:id="@+id/list_venue"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginTop="5dp"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="2.0sp"
+            tools:listitem="@layout/boxoffice_item"
+            >
+
+        </ListView>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv__ticket_release"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="一般発売 2017年6月7日(水) 12:00 ～※お一人様最大6枚まで購入可能。ご希望の回が売り切れの場合はご容赦ください。"
+        />
+
+
+</LinearLayout>
